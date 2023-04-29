@@ -28,10 +28,14 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  const saveExpenseDataHandler = (exp) => {
+    console.log("in app");
+    console.log(exp);
+  };
 
   return (
     <>
-      <NewExpense />
+      <NewExpense onSaveExpenseData={saveExpenseDataHandler} />
       <Expense expenses={expenses} />
     </>
   );
